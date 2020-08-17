@@ -38,56 +38,69 @@ Una vez con la topología realizada en GNS3, y con el router iniciado abrimos la
 <img src="/src/r1.PNG" alt="drawing" width="600"/> 
 
 Para entrar a la configuración del router scribimos el siguiente comando:
-#### conf t
+#### conf t  
+
 <img src="/src/r2.PNG" alt="drawing" width="600"/> 
 
 Una vez adentro para configurar la interfaz FastEthernet0/0 escribimos: 
-#### int f0/0
+#### int f0/0  
+
 <img src="/src/r3.PNG" alt="drawing" width="600"/> 
 
 Ahora asignamos una dirección ip a la interfaz con el siguiente comando:
-#### ip address 192.168.17.254 255.255.255.0
+#### ip address 192.168.17.254 255.255.255.0  
+
 <img src="/src/r4.PNG" alt="drawing" width="600"/> 
   
 Una vez asignada al ip para esta interfaz activamos la activamos con el comando:
-#### no shut
+#### no shut  
+
 <img src="/src/r5.PNG" alt="drawing" width="600"/> 
 
 Salimos de la configuración de interfaz con el comando:
-#### exit
+#### exit  
+
 <img src="/src/r6.PNG" alt="drawing" width="600"/> 
 
 Configuramos la otra interfaz que es la FastEthernet0/1 con los mismos comandos que utilizamos en la interfaz anterior, solamente aplicando cambios en el nombre de la interfaz y la dirección IP de esta.  
 Para entrar a la configuración del router scribimos el siguiente comando:
-#### conf t
+#### conf t  
+
 <img src="/src/r2.PNG" alt="drawing" width="600"/> 
 
-Una vez adentro para configurar la interfaz FastEthernet0/0 escribimos: 
-#### int f0/1
+Una vez adentro para configurar la interfaz FastEthernet0/1 escribimos: 
+#### int f0/1  
+
 <img src="/src/r7.PNG" alt="drawing" width="600"/> 
 
 Ahora asignamos una dirección ip a la interfaz con el siguiente comando:
-#### ip address 192.168.18.254 255.255.255.0
+#### ip address 192.168.18.254 255.255.255.0  
+
 <img src="/src/r8.PNG" alt="drawing" width="600"/> 
   
 Una vez asignada al ip para esta interfaz activamos la activamos con el comando:
-#### no shut
+#### no shut  
+
 <img src="/src/r9.PNG" alt="drawing" width="600"/> 
 
 Salimos de la configuración de interfaz con el comando:
-#### exit
+#### exit  
+
 <img src="/src/r10.PNG" alt="drawing" width="600"/> 
 
 Salimos de la configuración del router con el comando exit y escribimos el siguiente comando para ver las direcciones asignadas
-#### sh ip int brief
+#### sh ip int brief  
+
 <img src="/src/r11.PNG" alt="drawing" width="600"/> 
 
 Por último escribimos el siguiente comando para guardar los cambios permanentemente
-#### wr
+#### wr  
+
 <img src="/src/r12.PNG" alt="drawing" width="600"/> 
 
 
 ### CONFIGURACIÓN DE HOST 
-Una vez configuradas las direcciones de las interfaces del router, procedemos a encender nuestros host, en este caso la que tiene por nombre PC2, ingresando a la consola 
+Una vez configuradas las direcciones de las interfaces del router, procedemos a encender nuestros host, en este caso la que tiene por nombre PC2, ingresando a la consola tendríamos la siguiente ventana:  
+
 
 
