@@ -13,6 +13,10 @@
 - GNS3
 - Software de virtualización (VMWare o Virtual Box) instalados y configurado para uso con GNS3.
 
+### TOPOLOGIA DE RED DEL PROYECTO 
 
-<img src="/src/topologia.PNG" style="zoom:50%;" />
+  <img src="C:\Users\betor\Desktop\src\topologia.PNG" style="zoom:75%;" />
+
+  
+
 
