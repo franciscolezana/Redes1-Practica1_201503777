@@ -37,14 +37,12 @@ Las interfaces del router poseerán las siguientes ips:
 Una vez con la topología realizada en GNS3, y con el router iniciado abrimos la terminal para empezar a configurarlo, veremos la siguiente ventana:  
 <img src="/src/r1.PNG" alt="drawing" width="600"/> 
 
-Para entrar a la configuración del router scribimos el siguiente comando:
-#### conf t  
-
+Para entrar a la configuración del router scribimos el siguiente comando:  
+`conf t` 
 <img src="/src/r2.PNG" alt="drawing" width="600"/> 
 
-Una vez adentro para configurar la interfaz FastEthernet0/0 escribimos: 
-#### int f0/0  
-
+Una vez adentro para configurar la interfaz FastEthernet0/0 escribimos:   
+`int f0/1 t`  
 <img src="/src/r3.PNG" alt="drawing" width="600"/> 
 
 Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:
@@ -166,6 +164,16 @@ En el apartado de **IP Address** escribiremos la dirección IP asignada a esta m
 
 Para comprobar el correcto funcionamiento de la topología realizada y verificar que las direcciones ip se hayan asignado correctamente realizaremos pruebas de comunicación entre los host configurados, para ello utilizaremos el comando **ping**
 
+### PRUEBAS DE CONEXIÓN LINUX-1
+
+En la consola de la máquina virtual debemos escribir los siguientes comandos:  
+- COMUNICACIÓN CON EL HOST PC2:      **ping 192.168.17.15**
+- COMUNICACIÓN CON EL HOST PC3:      **ping 192.168.18.15**
+- COMUNICACIÓN CON EL HOST PC4:      **ping 192.168.18.30**
+
+<img src="/src/test4.PNG" alt="drawing" width="600"/> 
+
+
 ### PRUEBAS DE CONEXIÓN PC2
 
 En la consola debemos escribir los siguientes comandos:  
@@ -193,16 +201,6 @@ En la consola debemos escribir los siguientes comandos:
 
 <img src="/src/test3.PNG" alt="drawing" width="600"/> 
 
-### PRUEBAS DE CONEXIÓN LINUX-1
-
-En la consola de la máquina virtual debemos escribir los siguientes comandos:  
-- COMUNICACIÓN CON EL HOST PC2:      **ping 192.168.17.15**
-- COMUNICACIÓN CON EL HOST PC3:      **ping 192.168.18.15**
-- COMUNICACIÓN CON EL HOST PC4:      **ping 192.168.18.30**
-
-<img src="/src/test4.PNG" alt="drawing" width="600"/> 
-
-  
     
 ## GLOSARIO 
 
