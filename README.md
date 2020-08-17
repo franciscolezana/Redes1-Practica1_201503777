@@ -47,7 +47,7 @@ Una vez adentro para configurar la interfaz FastEthernet0/0 escribimos:
 
 <img src="/src/r3.PNG" alt="drawing" width="600"/> 
 
-Ahora asignamos una dirección ip a la interfaz con el siguiente comando:
+Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:
 #### ip address 192.168.17.254 255.255.255.0  
 
 <img src="/src/r4.PNG" alt="drawing" width="600"/> 
@@ -73,7 +73,7 @@ Una vez adentro para configurar la interfaz FastEthernet0/1 escribimos:
 
 <img src="/src/r7.PNG" alt="drawing" width="600"/> 
 
-Ahora asignamos una dirección ip a la interfaz con el siguiente comando:
+Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:
 #### ip address 192.168.18.254 255.255.255.0  
 
 <img src="/src/r8.PNG" alt="drawing" width="600"/> 
@@ -99,8 +99,119 @@ Por último escribimos el siguiente comando para guardar los cambios permanentem
 <img src="/src/r12.PNG" alt="drawing" width="600"/> 
 
 
-### CONFIGURACIÓN DE HOST 
+### CONFIGURACIÓN DE HOST PC2
 Una vez configuradas las direcciones de las interfaces del router, procedemos a encender nuestros host, en este caso la que tiene por nombre PC2, ingresando a la consola tendríamos la siguiente ventana:  
+<img src="/src/pc1.PNG" alt="drawing" width="600"/> 
+
+A continuación asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:
+#### ip 192.168.17.15 192.168.17.254  
+
+<img src="/src/pc2.PNG" alt="drawing" width="600"/> 
+
+Para mostrar las configuraciones que hemos realizado podemos ejecutar el siguiente comando:
+#### show ip  
+
+<img src="/src/pc3.PNG" alt="drawing" width="600"/> 
+
+Por último utilizamos el siguiente comando para guardar las configuraciones realizadas
+#### save
+
+<img src="/src/pc4.PNG" alt="drawing" width="600"/> 
+
+Realizamos la misma configuracion en los otros host para asignar la ip y el gateway correspondientes.  
+
+### CONFIGURACIÓN DE HOST PC3
+Asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:
+#### ip 192.168.18.15 192.168.18.254  
+
+<img src="/src/pc5.PNG" alt="drawing" width="600"/> 
+
+Guardamos las configuraciones realizadas con el siguiente comando:
+#### save
+
+<img src="/src/pc6.PNG" alt="drawing" width="600"/> 
+
+### CONFIGURACIÓN DE HOST PC4
+Asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:
+#### ip 192.168.18.30 192.168.18.254  
+
+<img src="/src/pc7.PNG" alt="drawing" width="600"/> 
+
+Guardamos las configuraciones realizadas con el siguiente comando:
+#### save
+
+<img src="/src/pc8.PNG" alt="drawing" width="600"/> 
+
+### CONFIGURACIÓN DE HOST LINUX-1
+Procedemos a encender nuestra máquina virtual y para esta práctica se utilizó TinyCore Linux, veremos una ventana en donde seleccionaremos la opción llamada **Boot TinyCore** para iniciar el sistema operativo 
+
+<img src="/src/linux1.PNG" alt="drawing" width="600"/> 
+
+<img src="/src/linux2.PNG" alt="drawing" width="600"/> 
+
+
+Una vez ubicados en el escritorio, nos dirigimos a la parte inferior de esta y buscamos la opcion que se llama **Panel de Control** la cual nos permitirá acceder a las configuraciones de la máquina:
+
+<img src="/src/linux3.PNG" alt="drawing" width="600"/> 
+
+Estando en el menú que nos apareció seleccionamos la opción de **Network**, para gestionar las configuraciones de red
+
+<img src="/src/linux4.PNG" alt="drawing" width="600"/> 
+
+En el apartado de **IP Address** escribiremos la dirección IP asignada a esta máquina la cuál es: **192.168.17.30** , el sistema identificará el Gateway automáticamente, selecccionamos la opción de **Apply** y luego **Exit** para finalizar con la configuración
+
+<img src="/src/linux5.PNG" alt="drawing" width="600"/> 
+
+## PRUEBAS DE CONFIGURACION 
+
+Para comprobar el correcto funcionamiento de la topología realizada y verificar que las direcciones ip se hayan asignado correctamente realizaremos pruebas de comunicación entre los host configurados, para ello utilizaremos el comando **ping**
+
+### PRUEBAS DE CONEXIÓN PC2
+
+En la consola debemos escribir los siguientes comandos:  
+- COMUNICACIÓN CON EL HOST LINUX-1:  **ping 192.168.17.30**
+- COMUNICACIÓN CON EL HOST PC3:      **ping 192.168.18.15**
+- COMUNICACIÓN CON EL HOST PC4:      **ping 192.168.18.30**
+
+<img src="/src/test1.PNG" alt="drawing" width="600"/>
+
+### PRUEBAS DE CONEXIÓN PC3
+
+En la consola debemos escribir los siguientes comandos:  
+- COMUNICACIÓN CON EL HOST LINUX-1:  **ping 192.168.17.30**
+- COMUNICACIÓN CON EL HOST PC2:      **ping 192.168.17.15**
+- COMUNICACIÓN CON EL HOST PC4:      **ping 192.168.18.30**
+
+<img src="/src/test2.PNG" alt="drawing" width="600"/> 
+
+### PRUEBAS DE CONEXIÓN PC4
+
+En la consola debemos escribir los siguientes comandos:  
+- COMUNICACIÓN CON EL HOST LINUX-1:  **ping 192.168.17.30**
+- COMUNICACIÓN CON EL HOST PC2:      **ping 192.168.17.15**
+- COMUNICACIÓN CON EL HOST PC3:      **ping 192.168.18.15**
+
+<img src="/src/test3.PNG" alt="drawing" width="600"/> 
+
+### PRUEBAS DE CONEXIÓN LINUX-1
+
+En la consola de la máquina virtual debemos escribir los siguientes comandos:  
+- COMUNICACIÓN CON EL HOST PC2:      **ping 192.168.17.15**
+- COMUNICACIÓN CON EL HOST PC3:      **ping 192.168.18.15**
+- COMUNICACIÓN CON EL HOST PC4:      **ping 192.168.18.30**
+
+<img src="/src/test4.PNG" alt="drawing" width="600"/> 
+
+  
+    
+## GLOSARIO 
+
+
+
+
+
+
+
 
 
 
