@@ -15,8 +15,14 @@
 
 ### TOPOLOGIA DE RED DEL PROYECTO 
 
-  <img src="/src/topologia.PNG" style="zoom:75%;" />
+La siguiente topología cuenta con 4 host de los cuales 3 son VPCS y 1 es una máquina virtual con un sistema tiny-linux para ahorrar recursos, podemos observar que los host se conectan a 2 switches distintos y estos se conectan entre sí por medio de un router el cuál será centro principal de comunicación.
+<img src="/src/topologia.PNG" style="zoom:75%;" />
 
-  
+### DIRECCIONES IP DE LOS HOST
 
+Para esta práctica se van a utilizar las siguientes direcciones IP, la X y Y representan el último y penúltimo número del carnét del estudiante. El carnet del usuario es 201503777 , se utilizarán X:7 y Y:8 para evitar errores al momento de conectar los host.  
 
+<img src="/src/ips.PNG" style="zoom:100%;"/> 
+
+Las interfaces del router poseerán las siguientes ips:
+<img src="/src/iprouter.PNG" style="zoom:100%;"/> 
