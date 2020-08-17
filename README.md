@@ -34,109 +34,111 @@ Las interfaces del router poseerán las siguientes ips:
 
 ### CONFIGURACIÓN DE INTERFACES FAST ETHERNET DEL ROUTER C3725
 
-Una vez con la topología realizada en GNS3, y con el router iniciado abrimos la terminal para empezar a configurarlo, veremos la siguiente ventana:  
+Una vez con la topología realizada en GNS3, y con el router iniciado abrimos la terminal para empezar a configurarlo, veremos la siguiente ventana:
+
 <img src="/src/r1.PNG" alt="drawing" width="600"/> 
 
 Para entrar a la configuración del router scribimos el siguiente comando:  
-`conf t` 
+`conf t`  
 <img src="/src/r2.PNG" alt="drawing" width="600"/> 
 
 Una vez adentro para configurar la interfaz FastEthernet0/0 escribimos:   
 `int f0/1 t`  
 <img src="/src/r3.PNG" alt="drawing" width="600"/> 
 
-Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:
-#### ip address 192.168.17.254 255.255.255.0  
+Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:  
+`ip address 192.168.17.254 255.255.255.0`
 
 <img src="/src/r4.PNG" alt="drawing" width="600"/> 
   
-Una vez asignada al ip para esta interfaz activamos la activamos con el comando:
-#### no shut  
+Una vez asignada al ip para esta interfaz activamos la activamos con el comando:    
+`no shut`  
 
 <img src="/src/r5.PNG" alt="drawing" width="600"/> 
 
-Salimos de la configuración de interfaz con el comando:
-#### exit  
+Salimos de la configuración de interfaz con el comando:    
+`exit`  
 
 <img src="/src/r6.PNG" alt="drawing" width="600"/> 
 
 Configuramos la otra interfaz que es la FastEthernet0/1 con los mismos comandos que utilizamos en la interfaz anterior, solamente aplicando cambios en el nombre de la interfaz y la dirección IP de esta.  
-Para entrar a la configuración del router scribimos el siguiente comando:
-#### conf t  
+Para entrar a la configuración del router scribimos el siguiente comando:  
+`conf t`  
 
 <img src="/src/r2.PNG" alt="drawing" width="600"/> 
 
-Una vez adentro para configurar la interfaz FastEthernet0/1 escribimos: 
-#### int f0/1  
+Una vez adentro para configurar la interfaz FastEthernet0/1 escribimos:   
+`int f0/1`  
 
 <img src="/src/r7.PNG" alt="drawing" width="600"/> 
 
-Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:
-#### ip address 192.168.18.254 255.255.255.0  
+Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:  
+`ip address 192.168.18.254 255.255.255.0`  
 
 <img src="/src/r8.PNG" alt="drawing" width="600"/> 
   
-Una vez asignada al ip para esta interfaz activamos la activamos con el comando:
-#### no shut  
+Una vez asignada al ip para esta interfaz activamos la activamos con el comando:  
+`no shut`  
 
 <img src="/src/r9.PNG" alt="drawing" width="600"/> 
 
-Salimos de la configuración de interfaz con el comando:
-#### exit  
+Salimos de la configuración de interfaz con el comando:  
+`exit`  
 
 <img src="/src/r10.PNG" alt="drawing" width="600"/> 
 
-Salimos de la configuración del router con el comando exit y escribimos el siguiente comando para ver las direcciones asignadas
-#### sh ip int brief  
+Salimos de la configuración del router con el comando exit y escribimos el siguiente comando para ver las direcciones asignadas:  
+`sh ip int brief`  
 
 <img src="/src/r11.PNG" alt="drawing" width="600"/> 
 
-Por último escribimos el siguiente comando para guardar los cambios permanentemente
-#### wr  
+Por último escribimos el siguiente comando para guardar los cambios permanentemente  
+`wr`  
 
 <img src="/src/r12.PNG" alt="drawing" width="600"/> 
 
 
 ### CONFIGURACIÓN DE HOST PC2
-Una vez configuradas las direcciones de las interfaces del router, procedemos a encender nuestros host, en este caso la que tiene por nombre PC2, ingresando a la consola tendríamos la siguiente ventana:  
+Una vez configuradas las direcciones de las interfaces del router, procedemos a encender nuestros host, en este caso la que tiene por nombre PC2, ingresando a la consola tendríamos la siguiente ventana:
+
 <img src="/src/pc1.PNG" alt="drawing" width="600"/> 
 
-A continuación asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:
-#### ip 192.168.17.15 192.168.17.254  
+A continuación asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:  
+`ip 192.168.17.15 192.168.17.254`  
 
 <img src="/src/pc2.PNG" alt="drawing" width="600"/> 
 
-Para mostrar las configuraciones que hemos realizado podemos ejecutar el siguiente comando:
-#### show ip  
+Para mostrar las configuraciones que hemos realizado podemos ejecutar el siguiente comando:  
+`show ip`  
 
 <img src="/src/pc3.PNG" alt="drawing" width="600"/> 
 
-Por último utilizamos el siguiente comando para guardar las configuraciones realizadas
-#### save
+Por último utilizamos el siguiente comando para guardar las configuraciones realizadas  
+`save`
 
 <img src="/src/pc4.PNG" alt="drawing" width="600"/> 
 
 Realizamos la misma configuracion en los otros host para asignar la ip y el gateway correspondientes.  
 
 ### CONFIGURACIÓN DE HOST PC3
-Asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:
-#### ip 192.168.18.15 192.168.18.254  
+Asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:  
+`ip 192.168.18.15 192.168.18.254`  
 
 <img src="/src/pc5.PNG" alt="drawing" width="600"/> 
 
-Guardamos las configuraciones realizadas con el siguiente comando:
-#### save
+Guardamos las configuraciones realizadas con el siguiente comando:  
+`save`
 
 <img src="/src/pc6.PNG" alt="drawing" width="600"/> 
 
 ### CONFIGURACIÓN DE HOST PC4
-Asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:
-#### ip 192.168.18.30 192.168.18.254  
+Asignamos la IP y definimos el gateway correspondiente a esta máquina con el siguiente comando:  
+`ip 192.168.18.30 192.168.18.254`  
 
 <img src="/src/pc7.PNG" alt="drawing" width="600"/> 
 
-Guardamos las configuraciones realizadas con el siguiente comando:
-#### save
+Guardamos las configuraciones realizadas con el siguiente comando:  
+`save`
 
 <img src="/src/pc8.PNG" alt="drawing" width="600"/> 
 
@@ -204,12 +206,50 @@ En la consola debemos escribir los siguientes comandos:
     
 ## GLOSARIO 
 
+### GATEWAY
+ 
+La pasarela o puerta de enlace es el dispositivo que actúa de interfaz de conexión entre aparatos o dispositivos, y también posibilita compartir recursos entre dos o más ordenadores. Su propósito es traducir la información del protocolo utilizado en una red inicial, al protocolo usado en la red de destino  
 
 
+### GNS3
+GNS3 es un simulador gráfico de red lanzado en 2008, que te permite diseñar topologías de red complejas y poner en marcha simulaciones sobre ellos, permitiendo la combinación de dispositivos tanto reales como virtuales.   
 
 
+### HOST
+ 
+El término host o anfitrión se usa en informática para referirse a las computadoras u otros dispositivos conectados a una red que proveen y utilizan servicios de ella  
+
+### INTERFAZ
+Una interfaz de red es una interfaz de software o hardware entre dos equipos o capas de protocolo en una red informática. Una interfaz de red generalmente tendrá algún tipo de dirección de red, por lo tanto, es una conexión entre dos máquinas de cualquier tipo, a las cuales les brinda un soporte para la comunicación a diferentes estratos.
+ 
+
+### IP
+ 
+Una dirección IP, es un número que permite la identificación de una interfaz en red de una computadora (ordenador), un teléfono inteligente u otro dispositivo que usa el mencionado protocolo. Esta dirección puede ser estática o dinámica  
 
 
+### MAQUINA VIRTUAL
+
+Las máquinas virtuales son ordenadores de software que proporcionan la misma funcionalidad que los ordenadores físicos. Como ocurre con los ordenadores físicos, ejecutan aplicaciones y un sistema operativo. Sin embargo, las máquinas virtuales son archivos informáticos que se ejecutan en un ordenador físico y se comportan como un ordenador físico. En otras palabras, las máquinas virtuales se comportan como sistemas informáticos independientes.  
 
 
+### ROUTER
+Un rúter, enrutador, o encaminador, es un dispositivo que permite interconectar computadoras que funcionan en el marco de una red. Su función: se encarga de establecer la ruta que destinará a cada paquete de datos dentro de una red informática   
 
+
+### SWITCH
+Un switch o conmutador es un dispositivo de interconexión utilizado para conectar equipos en red formando lo que se conoce como una red de área local (LAN) y cuyas especificaciones técnicas siguen el estándar conocido como Ethernet (o técnicamente IEEE 802.3).  
+
+
+### TOPOLOGIA DE RED
+ 
+La topología de red se define como el mapa físico o lógico de una red para intercambiar datos. En otras palabras, es la forma en que está diseñada la red, sea en el plano físico o lógico. El concepto de red puede definirse como «conjunto de nodos interconectados  
+
+
+### VIRTUALIZACION
+la virtualización es el proceso a través del cual se emula un recurso, como por ejemplo puede ser un sistema operativo, a través de una herramienta de software.  
+
+
+### VPC
+ 
+Una nube privada virtual1 o VPC (sigla del inglés virtual private cloud) es un conjunto de recursos computacionales configurables por demanda al interior de un ambiente de computación en la nube pública, el cual provee un cierto nivel de aislamiento entre las diferentes organizaciones o usuarios que utilizan dichos recursos.  
