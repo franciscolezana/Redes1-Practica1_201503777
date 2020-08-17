@@ -40,10 +40,12 @@ Una vez con la topología realizada en GNS3, y con el router iniciado abrimos la
 
 Para entrar a la configuración del router scribimos el siguiente comando:  
 `conf t`  
+
 <img src="/src/r2.PNG" alt="drawing" width="600"/> 
 
 Una vez adentro para configurar la interfaz FastEthernet0/0 escribimos:   
-`int f0/1 t`  
+`int f0/1 t` 
+
 <img src="/src/r3.PNG" alt="drawing" width="600"/> 
 
 Ahora asignamos una dirección ip a la interfaz y la máscara de red con el siguiente comando:  
