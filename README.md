@@ -15,7 +15,7 @@
 
 ### TOPOLOGIA DE RED DEL PROYECTO 
 
-  <img src="C:\Users\betor\Desktop\src\topologia.PNG" style="zoom:75%;" />
+  <img src="/src/topologia.PNG" style="zoom:75%;" />
 
   
 
